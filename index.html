@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GPA & CGPA Calculator</title>
+  <meta name="description" content="Calculate your GPA and CGPA with beautiful animated themes">
+  <meta name="author" content="Mutahhar Bhutta">
+  <meta name="keywords" content="GPA Calculator, CGPA Calculator, Semester GPA, Cumulative GPA, University GPA, Student GPA, Academic Performance, Grade Calculator, PUCIT GPA, PUCIT CGPA">
+  <meta property="og:title" content="GPA & CGPA Calculator">
+  <meta property="og:description" content="Calculate your GPA and CGPA with beautiful animated themes">
+  <meta property="og:type" content="website">
+  <!-- <meta property="og:url" content="https://mutahharbhutta.github.io/gpa-cgpa-calculator/"> -->
+
+  mutahharbhutta/gpa-cgpa-calculator
+  <meta property="og:image" content="https://mutahharbhutta.github.io/gpa-cgpa-calculator/preview.png">
+  <link rel="stylesheet" href="styles.css"/>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="logo">PUCIT - Calculate your semester GPA and CGPA
+
+</h1>
+       <p class="subtitle">
+        developed by
+        <a href="https://github.com/mutahharbhutta" target="_blank" rel="noopener">Mutahhar Bhutta</a>
+      </p>
+      
+      <div class="theme-selector">
+        <button class="theme-btn active" data-theme="chalkboard">Chalkboard</button>
+        <button class="theme-btn" data-theme="modern">Modern</button>
+        <button class="theme-btn" data-theme="90s">90s Retro</button>
+        <button class="theme-btn" data-theme="notebook">Notebook</button>
+        <button class="theme-btn" data-theme="neon">Cyberpunk</button>
+        <button class="theme-btn" data-theme="aesthetic">Aesthetic</button>
+        <button class="theme-btn" data-theme="cat">Cat</button>
+        <button class="theme-btn" data-theme="ocean">Ocean</button>
+        <button class="theme-btn" data-theme="forest">Forest</button>
+        <button class="theme-btn" data-theme="space">Space</button>
+        <button class="theme-btn" data-theme="sunset">Sunset</button>
+        <button class="theme-btn" data-theme="dark">Dark</button>
+      </div>
+    </header>
+
+    <div class="calculator-container">
+      <div class="calculator-panel">
+        <div class="tabs">
+          <button class="tab active" data-tab="gpa">GPA Calculator</button>
+          <button class="tab" data-tab="cgpa">CGPA Calculator</button>
+        </div>
+
+        <!-- GPA Calculator -->
+        <div class="tab-content active" id="gpa-content">
+          <div class="form-group">
+            <label class="form-label">Number of Subjects</label>
+            <input type="number" class="form-input" id="subject-count" min="1" max="15" placeholder="Enter number of subjects">
+          </div>
+          <button class="btn" id="generate-subjects">Generate Subject Fields</button>
+          
+          <div id="subjects-container" style="max-height: 300px; overflow-y: auto; margin-top: 15px;"></div>
+          
+          <button class="btn" id="calculate-gpa" style="display: none; margin-top: 15px; width: 100%;">Calculate GPA</button>
+        </div>
+
+        <!-- CGPA Calculator -->
+        <div class="tab-content" id="cgpa-content">
+          <div class="form-group">
+            <label class="form-label">Number of Semesters</label>
+            <input type="number" class="form-input" id="semester-count" min="1" max="8" placeholder="Enter number of semesters">
+          </div>
+          <button class="btn" id="generate-semesters">Generate Semester Fields</button>
+          
+          <div id="semesters-container" style="max-height: 300px; overflow-y: auto; margin-top: 15px;"></div>
+          
+          <button class="btn" id="calculate-cgpa" style="display: none; margin-top: 15px; width: 100%;">Calculate CGPA</button>
+        </div>
+      </div>
+
+      <div class="result-panel">
+        <div class="result-circle">
+          <svg class="circle-progress" viewBox="0 0 120 120">
+            <defs>
+              <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#667eea"/>
+                <stop offset="100%" style="stop-color:#764ba2"/>
+              </linearGradient>
+              <linearGradient id="aestheticGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#ff9a9e"/>
+                <stop offset="100%" style="stop-color:#b6b9ff"/>
+              </linearGradient>
+            </defs>
+            <circle class="circle-bg" />
+            <circle class="circle-fill" stroke="url(#gradient)" />
+          </svg>
+          <div class="result-text">
+            <div class="result-value" id="result-value">0.00</div>
+            <div class="result-label" id="result-label">GPA</div>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-value" id="current-value">0.00</div>
+            <div class="stat-label">Current</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">4.00</div>
+            <div class="stat-label">Maximum</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="total-credits">0</div>
+            <div class="stat-label" id="credits-label">Credits</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="grade-value">-</div>
+            <div class="stat-label">Grade</div>
+          </div>
+        </div>
+
+        <div class="result-actions">
+          <button class="btn" id="copy-result">Copy Result</button>
+          <button class="btn" id="export-result">Export to TXT</button>
+          <button class="btn" id="reset-all">Reset All</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
