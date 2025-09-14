@@ -11,7 +11,7 @@
 The **GPA & CGPA Calculator** is a lightweight, responsive, and interactive web application for students.  
 It helps calculate **Semester GPA** and **Cumulative GPA (CGPA)** quickly and accurately while offering a **fun, personalized, and visually appealing experience**.  
 
- **Live Demo:** [GPA & CGPA Calculator](https://mutahharbhutta.github.io/gpa-and-cgpa-calculator)  
+ **Website:** https://mutahharbhutta.github.io/pucit-cgpa-calculator/
 
 ---
 
@@ -20,7 +20,7 @@ It helps calculate **Semester GPA** and **Cumulative GPA (CGPA)** quickly and ac
 | Aspect | Details |
 |-----------|------------|
 | Purpose | Help students calculate their **GPA** and **CGPA** with ease and accuracy. |
-| Design | Offers **12+ nostalgic & modern themes** (retro, chalkboard, neon, notebook, etc.). |
+| Design | Offers **11+ nostalgic & modern themes** (retro, chalkboard, neon, notebook, etc.). |
 | Visualization | Animated **progress circle** makes GPA/CGPA more engaging. |
 | Output | Displays **GPA/CGPA, total credits, and grade evaluation**. |
 | Utility | Copy results instantly or export them as a **TXT report**. |
@@ -58,7 +58,7 @@ It helps calculate **Semester GPA** and **Cumulative GPA (CGPA)** quickly and ac
 ## Getting Started  
 
 ###  Run Online  
-👉 [Live Demo](https://mutahharbhutta.github.io/gpa-and-cgpa-calculator)  
+👉 https://mutahharbhutta.github.io/pucit-cgpa-calculator/
 
 ### Run Locally  
 
